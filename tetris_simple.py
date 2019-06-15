@@ -3,6 +3,7 @@ block_initial_position,score,times,gameover,press,all_block,background=[20,5],[0
 background[0],select_block=[1 for column in range(0,10)],list(random.choice(all_block))
 def move(n):
     if n==100:
+        for row,column in select_block:
             pygame.draw.rect(screen,(255,165,0),((column+block_initial_position[1])*40,800-(row+block_initial_position[0])*40,38,38))
         for row in range(0,20):
             for column in range(0,10):
